@@ -191,22 +191,38 @@ header{
 }
 
 .projets{
-    
+    @extend %flex;
+    flex-direction: column;
+    gap: 5rem;
     .projetscode{
         @extend %flex;
         @extend %jcc;
         height: 21rem;
-        img{
-            width: 33vw;
-            height: 40vh;
-            &:hover{
-                background-color: #1F203A
-            }
+        gap: 3rem;
+        div{
+            
+            img{
+                width: 30vw;
+                height: 40vh;
+                &:hover{
+                    background-color: #1F203A
+                }
+        }
+
         }
     }
     .design{
         @extend %flex;
+        @extend %jcc;
          height: 21rem;
+         gap: 3rem;
+        img{
+            width: 30vw;
+            height: 40vh;
+            &:hover{
+                background-color: #1F203A
+            }
 
     }
+}
 }
