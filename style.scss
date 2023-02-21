@@ -144,7 +144,25 @@ header{
         height: 400px;
         background-color: #e5e5e5;
         
-    
-
     }
+}
+
+.partiedigit{
+    margin: 4rem 19rem 0;
+    .digital{
+        @extend %flex;
+        gap: 60px;
+        .lefttext{
+            width: 504px;
+            height: 282px;
+            // margin: 9rem 16rem;
+        }
+        .nous{
+            font-size: 4rem;
+        }
+        .dig{
+            font-size: 6rem;
+        }
+    }
+
 }

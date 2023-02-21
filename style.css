@@ -1,4 +1,4 @@
-.sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo, .afterNad, header nav {
+.partiedigit .digital, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo, .afterNad, header nav {
   display: flex;
 }
 
@@ -115,4 +115,21 @@ header nav img {
   width: 100vw;
   height: 400px;
   background-color: #e5e5e5;
+}
+
+.partiedigit {
+  margin: 4rem 19rem 0;
+}
+.partiedigit .digital {
+  gap: 60px;
+}
+.partiedigit .digital .lefttext {
+  width: 504px;
+  height: 282px;
+}
+.partiedigit .digital .nous {
+  font-size: 4rem;
+}
+.partiedigit .digital .dig {
+  font-size: 6rem;
 }/*# sourceMappingURL=style.css.map */
