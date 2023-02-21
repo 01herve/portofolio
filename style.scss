@@ -148,10 +148,17 @@ header{
 }
 
 .partiedigit{
-    margin: 4rem 19rem 0;
+    margin-top: 15rem;
+   
+    @extend %flex;
+    flex-direction: column;
+    @extend %jcc;
+    height: 60rem;
+
     .digital{
         @extend %flex;
         gap: 60px;
+
         .lefttext{
             width: 504px;
             height: 282px;
@@ -159,10 +166,47 @@ header{
         }
         .nous{
             font-size: 4rem;
+            text-align: right;
         }
         .dig{
             font-size: 6rem;
         }
     }
 
+    .partiearrow{
+        margin: 30px;
+        @extend %flex;
+        flex-direction: column;
+        @extend %jcc;
+        gap: 6rem;
+       
+        p{
+            // height: 175px;
+            width: 560px;
+            text-align: center;
+
+
+        }
+    }
+}
+
+.projets{
+    
+    .projetscode{
+        @extend %flex;
+        @extend %jcc;
+        height: 21rem;
+        img{
+            width: 33vw;
+            height: 40vh;
+            &:hover{
+                background-color: #1F203A
+            }
+        }
+    }
+    .design{
+        @extend %flex;
+         height: 21rem;
+
+    }
 }

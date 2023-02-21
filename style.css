@@ -1,8 +1,8 @@
-.partiedigit .digital, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo, .afterNad, header nav {
+.projets .design, .projets .projetscode, .partiedigit .partiearrow, .partiedigit .digital, .partiedigit, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo, .afterNad, header nav {
   display: flex;
 }
 
-.sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo {
+.projets .projetscode, .partiedigit .partiearrow, .partiedigit, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo {
   justify-content: center;
   align-items: center;
 }
@@ -118,7 +118,9 @@ header nav img {
 }
 
 .partiedigit {
-  margin: 4rem 19rem 0;
+  margin-top: 15rem;
+  flex-direction: column;
+  height: 60rem;
 }
 .partiedigit .digital {
   gap: 60px;
@@ -129,7 +131,31 @@ header nav img {
 }
 .partiedigit .digital .nous {
   font-size: 4rem;
+  text-align: right;
 }
 .partiedigit .digital .dig {
   font-size: 6rem;
+}
+.partiedigit .partiearrow {
+  margin: 30px;
+  flex-direction: column;
+  gap: 6rem;
+}
+.partiedigit .partiearrow p {
+  width: 560px;
+  text-align: center;
+}
+
+.projets .projetscode {
+  height: 21rem;
+}
+.projets .projetscode img {
+  width: 33vw;
+  height: 40vh;
+}
+.projets .projetscode img:hover {
+  background-color: #1F203A;
+}
+.projets .design {
+  height: 21rem;
 }/*# sourceMappingURL=style.css.map */
