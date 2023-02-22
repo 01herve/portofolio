@@ -308,6 +308,17 @@ header{
 
 footer{
     @extend %flex;
-    background-color: #1F203A;
-    margin-top: 21rem;
+    justify-content: space-between;
+    background-color: $bg_nav;
+    .leftdiv{
+        background-color: red;
+        width: 55rem;
+    }
+    .milieu{
+        width: 1px;
+height: 366px;
+    }
+    .rightdiv{width: 55rem;
+    background-color:yellow;
+    }
 }

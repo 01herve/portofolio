@@ -274,6 +274,18 @@ header nav img {
 }
 
 footer {
+  justify-content: space-between;
   background-color: #1F203A;
-  margin-top: 21rem;
+}
+footer .leftdiv {
+  background-color: red;
+  width: 55rem;
+}
+footer .milieu {
+  width: 1px;
+  height: 366px;
+}
+footer .rightdiv {
+  width: 55rem;
+  background-color: yellow;
 }/*# sourceMappingURL=style.css.map */
