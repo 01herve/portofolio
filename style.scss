@@ -1,3 +1,6 @@
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+
 $bg_nav:#1F203A;
 $bg_photo:#E3E3E3;
 $bg_img:#F2F2F2;
@@ -13,8 +16,43 @@ $media:"only screen and (max-with:$size_media)";
 
 %flex{display: flex;}
 %jcc{justify-content: center;align-items: center;}
+%templete01{h3{font-weight: 400;strong{font-weight: 700;}}}
+%templeteh3{    h3{position: absolute;left: 47px;}}
+%bd_img{border:2px solid $bg_img;border-radius: 10px;}
+%centre{left: 50%;top: 50%;transform: translate(-50%,-50%);}
+%btn{ button{
+    background-color: $bg_btn;
+    width: 229px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+   }}
+%fullall{
+                div{object-fit:cover;overflow: hidden;position: relative;
+                    p{visibility: hidden;
+                        position: absolute;
+                        text-align: center;
+                        @extend %centre;
+                        font-size: 25px;
+                        font-weight: 700;
+                        // @extend img{visibility: visible;}
 
-*{margin: 0; padding: 0; box-sizing: border-box;}
+                }  
+                img{transition:all 0.3s ease;width: 30vw;height: 40vh;@extend %bd_img; 
+
+                    &:hover{transform: scale(1.1);opacity: 0.3;}
+
+                    }
+
+                    }
+                    }
+*{margin: 0; padding: 0; box-sizing: border-box;
+font-family: 'Libre Baskerville', serif;
+color: $bg_txt;
+}
 
 header{
     background-color: $bg_nav;
@@ -67,23 +105,15 @@ header{
 
     width: 34rem;
 /* or 24px */
-   h3{
-    strong{
-
-    }
-   }
+    @extend %templete01;
+    h3{font-size: 32px;}
    p{
     font-weight: 300;
     font-size: 12px;
     line-height: 196%;
+    width: 29vw;
    }
-   button{
-    background-color: $bg_btn;
-    width: 229px;
-    height: 42px;
-    border: none;
-    border-radius: 10px;
-   }
+    @extend %btn;
 }
 .sec2{
     height: 62rem;
@@ -99,6 +129,9 @@ header{
         .textsec2{
             position: absolute;
             left: 30rem;
+           @extend %templete01;
+           h3{font-size: 20px;}
+           
         }
         img{
             // position: absolute;
@@ -158,11 +191,15 @@ header{
     .digital{
         @extend %flex;
         gap: 60px;
+        align-items: center;
 
         .lefttext{
             width: 504px;
-            height: 282px;
-            // margin: 9rem 16rem;
+           p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 134.5%;
+           }
         }
         .nous{
             font-size: 4rem;
@@ -194,35 +231,83 @@ header{
     @extend %flex;
     flex-direction: column;
     gap: 5rem;
-    .projetscode{
-        @extend %flex;
-        @extend %jcc;
-        height: 21rem;
-        gap: 3rem;
-        div{
-            
-            img{
-                width: 30vw;
-                height: 40vh;
-                &:hover{
-                    background-color: #1F203A
-                }
+    margin: 50px 0;
+    .col1{
+        @extend %templeteh3;
+        .projetscode{
+            position: relative;
+            margin: 60px 0;
+            @extend %flex;
+            @extend %jcc;
+            height: 21rem;
+            gap: 3rem;
+            @extend %fullall;
+    }}
+    .col2{
+        @extend %templeteh3;
+        .design{
+            position: relative;
+            @extend %flex;
+            @extend %jcc;
+            height: 21rem;
+            gap: 3rem;
+            margin: 60px 0;
+            @extend %fullall;
+    }}
+    
+        @extend %btn;
+        button{
+            margin: 0 auto;
         }
-
-        }
-    }
-    .design{
-        @extend %flex;
-        @extend %jcc;
-         height: 21rem;
-         gap: 3rem;
-        img{
-            width: 30vw;
-            height: 40vh;
-            &:hover{
-                background-color: #1F203A
-            }
-
-    }
+    
 }
+.middle{
+    // height: 60rem;
+    @extend %flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .expoleft{
+        margin: 10rem 0;
+        @extend %flex;
+        flex-direction: column;
+        gap: 20px;
+        h3{
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 32px;
+            line-height: 40px;
+            span{color: $bg_btn;}}
+        .explore{
+            width: 549px;
+            height: 162px;
+            top: 67px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+        }
+            @extend %btn;   
+        
+    }
+    .service{
+          position: relative;
+            width: 545px;
+            font-weight: 400;
+            font-size: 16px;
+            top: 50vh;
+            
+            line-height: 140%;
+            /* or 22px */
+            text-align: right;
+            p{
+                position: absolute;
+                left:1 px;
+            }
+        }
+}
+
+footer{
+    @extend %flex;
+    background-color: #1F203A;
+    margin-top: 21rem;
 }

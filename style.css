@@ -1,16 +1,76 @@
-.projets .design, .projets .projetscode, .projets, .partiedigit .partiearrow, .partiedigit .digital, .partiedigit, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo, .afterNad, header nav {
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+footer, .middle .expoleft, .middle, .projets .col2 .design, .projets .col1 .projetscode, .projets, .partiedigit .partiearrow, .partiedigit .digital, .partiedigit, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo, .afterNad, header nav {
   display: flex;
 }
 
-.projets .design, .projets .projetscode, .partiedigit .partiearrow, .partiedigit, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo {
+.projets .col2 .design, .projets .col1 .projetscode, .partiedigit .partiearrow, .partiedigit, .sec2 .vide .phtbtn .cardphoto, .sec2 .vide, .creatif, .afterNad .photo {
   justify-content: center;
   align-items: center;
+}
+
+.sec2 .vide .textsec2 h3, .creatif h3 {
+  font-weight: 400;
+}
+.sec2 .vide .textsec2 h3 strong, .creatif h3 strong {
+  font-weight: 700;
+}
+
+.projets .col2 h3, .projets .col1 h3 {
+  position: absolute;
+  left: 47px;
+}
+
+.projets .col2 .design div img, .projets .col1 .projetscode div img {
+  border: 2px solid #F2F2F2;
+  border-radius: 10px;
+}
+
+.projets .col2 .design div p, .projets .col1 .projetscode div p {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middle .expoleft button, .projets button, .creatif button {
+  background-color: #ffa54d;
+  width: 229px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.projets .col2 .design div, .projets .col1 .projetscode div {
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.projets .col2 .design div p, .projets .col1 .projetscode div p {
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+.projets .col2 .design div img, .projets .col1 .projetscode div img {
+  transition: all 0.3s ease;
+  width: 30vw;
+  height: 40vh;
+}
+.projets .col2 .design div img:hover, .projets .col1 .projetscode div img:hover {
+  transform: scale(1.1);
+  opacity: 0.3;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
+  color: #454545;
 }
 
 header {
@@ -59,17 +119,14 @@ header nav img {
   width: 34rem;
   /* or 24px */
 }
+.creatif h3 {
+  font-size: 32px;
+}
 .creatif p {
   font-weight: 300;
   font-size: 12px;
   line-height: 196%;
-}
-.creatif button {
-  background-color: #ffa54d;
-  width: 229px;
-  height: 42px;
-  border: none;
-  border-radius: 10px;
+  width: 29vw;
 }
 
 .sec2 {
@@ -83,6 +140,9 @@ header nav img {
 .sec2 .vide .textsec2 {
   position: absolute;
   left: 30rem;
+}
+.sec2 .vide .textsec2 h3 {
+  font-size: 20px;
 }
 .sec2 .vide img {
   width: 34rem;
@@ -124,10 +184,15 @@ header nav img {
 }
 .partiedigit .digital {
   gap: 60px;
+  align-items: center;
 }
 .partiedigit .digital .lefttext {
   width: 504px;
-  height: 282px;
+}
+.partiedigit .digital .lefttext p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 134.5%;
 }
 .partiedigit .digital .nous {
   font-size: 4rem;
@@ -149,26 +214,66 @@ header nav img {
 .projets {
   flex-direction: column;
   gap: 5rem;
+  margin: 50px 0;
 }
-.projets .projetscode {
+.projets .col1 .projetscode {
+  position: relative;
+  margin: 60px 0;
   height: 21rem;
   gap: 3rem;
 }
-.projets .projetscode div img {
-  width: 30vw;
-  height: 40vh;
-}
-.projets .projetscode div img:hover {
-  background-color: #1F203A;
-}
-.projets .design {
+.projets .col2 .design {
+  position: relative;
   height: 21rem;
   gap: 3rem;
+  margin: 60px 0;
 }
-.projets .design img {
-  width: 30vw;
-  height: 40vh;
+.projets button {
+  margin: 0 auto;
 }
-.projets .design img:hover {
+
+.middle {
+  justify-content: center;
+  margin-top: 30px;
+}
+.middle .expoleft {
+  margin: 10rem 0;
+  flex-direction: column;
+  gap: 20px;
+}
+.middle .expoleft h3 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 32px;
+  line-height: 40px;
+}
+.middle .expoleft h3 span {
+  color: #ffa54d;
+}
+.middle .expoleft .explore {
+  width: 549px;
+  height: 162px;
+  top: 67px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+.middle .service {
+  position: relative;
+  width: 545px;
+  font-weight: 400;
+  font-size: 16px;
+  top: 50vh;
+  line-height: 140%;
+  /* or 22px */
+  text-align: right;
+}
+.middle .service p {
+  position: absolute;
+  left: 1 px;
+}
+
+footer {
   background-color: #1F203A;
+  margin-top: 21rem;
 }/*# sourceMappingURL=style.css.map */
