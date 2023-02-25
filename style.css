@@ -19,6 +19,7 @@
 .leftdiv{display: none;}
 input{height: 32px; width: 40vw;margin: 5px;}
 .bg_colorwh{color: #fff;}
+.pad{padding-top: 20px;}
 .pdpetit{padding-right: 30px;}
 .margin{margin: 13vh  5vw;}
 .margini{margin: 5vh 5vw}
@@ -43,7 +44,7 @@ nav{width: 100vw;height:112px ;}
 .afterNav{height:25vh;}
 .photo {height: 9rem;width: 9rem; border-radius: 22rem;border: 9px solid #fff ;position: absolute;}
 .photo img{height: 8rem;width: 8rem; border-radius: 400px;}
-button{background-color: #FFA54D;padding: 12px 30px;border-radius: 10px; color: white;}
+button{background-color: #FFA54D;padding: 12px 30px;border-radius: 10px; color: white; border: none;}
 img{width: 44vw; height: 36vh;}
 .insp{width: 55vw;}
 /* .flowY{overflow-x:scroll; width: 100vw;white-space: wrap;} */
@@ -51,6 +52,10 @@ img{width: 44vw; height: 36vh;}
 .imgprojet{width: 20rem;}
 /* .design{width: 62rem;} */
 
-@media screen and () {
-    
+@media screen and (min-width:718px) {
+    .top{ top: 140px;}
+.photo {height: 13rem;width: 13rem; }
+
+
+   
 }
