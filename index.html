@@ -110,7 +110,7 @@
       <button>MES PROJETS</button>
       <div class="partie2img"></div>
     </section>
-    <section class="partiedigit ">
+    <section class="partiedigit margeBo">
       <div class="digital flex gap alItem margin">
         <div class="txt3mots text-alR">
           <div class="fontmin fontsizeMin">NOUS</div>
@@ -170,38 +170,38 @@
       </div>
     </section>
 
-    <section class="projets flex flex-dir jcc ">
+    <section class="projets flex flex-dir jcc  jcc gap margin">
       <div class="">
-      <div class="col1 ">
-        <h3>Projets codés</h3>
-        <div class="projetscode flex jcc gap flowY">
-          <div>
-            <img class="imgprojet" src="/img/KDA Quiz APPcarnet.png" alt="carnet" />
+      <div class="col1 flex flex-dir ">
+        <h3 class="marginAuto">Projets codés</h3>
+        <div class="projetscode flex jcc gap  flexwrap">
+          <div class="">
+            <img class="imgprojet flexshrink" src="/img/KDA Quiz APPcarnet.png" alt="carnet" />
             <p>projet de carnet d'adresse</p>
           </div>
           <div>
-            <img class="imgprojet" src="/img/desktop-preview.jpg" alt="" />
+            <img class="imgprojet flexshrink" src="/img/desktop-preview.jpg" alt="" />
             <p>projet de l'agence de design'</p>
           </div>
           <div>
-            <img class="imgprojet" src="/img/maquette.png" alt="portofolio" />
+            <img class="imgprojet flexshrink" src="/img/maquette.png" alt="portofolio" />
             <p>projet sur mon portfolio</p>
           </div>
         </div>
       </div>
-      <div class="col2">
-        <h3>Projets designs</h3>
-        <div class="design">
+      <div class="col2 flex flex-dir jcc marginB">
+        <h3 class="marginAuto">Projets designs</h3>
+        <div class="design  flex jcc gap flexwrap jcc">
           <div>
-            <img src="/img/039_Testimonials.png" alt="" />
+            <img class="imgprojet" src="/img/039_Testimonials.png" alt="" />
             <p>maquette de l'entreprise Crowdfund'</p>
           </div>
           <div>
-            <img src="/img/008_404.png" alt="404" />
+            <img class="imgprojet" src="/img/008_404.png" alt="404" />
             <p>page 404</p>
           </div>
           <div>
-            <img src="/img/092_FAQ.png" alt="FAQ" />
+            <img class="imgprojet" src="/img/092_FAQ.png" alt="FAQ" />
             <p>maquette de l'entreprise Crowdfund</p>
           </div>
         </div>
@@ -210,13 +210,13 @@
       <button>voir plus</button>
     </section>
 
-    <section class="middle">
-      <div class="expoleft">
+    <section class="middle margeBo flex">
+      <div class="expoleft flex alItem gap flex-dir">
         <div>
-          <h3 class="fontmin">EXPLORE <span class="fontmax"> PLUS</span></h3>
+          <h3 class="fontmax">EXPLORE <span class="fontmax bg_btn"> PLUS</span></h3>
         </div>
-        <div class="explore">
-          <p>
+        <div class="explore text_al">
+          <p class="fontsizetext margini ">
             Nous sommes une équipe de professionnels du développement
             d'applications et de sites web, prêts à répondre à vos besoins. Nous
             sommes là pour vous aider à créer votre application ou votre site
@@ -227,8 +227,8 @@
         </div>
         <div><button>CONTACT US</button></div>
       </div>
-      <div class="service">
-        <p>
+      <div class="service margini fontsizetext">
+        <p class="text-alR">
           Nous sommes ravis de vous proposer notre service de développement
           d'applications et de sites web. Que vous ayez une idée concrète ou
           simplement besoin de conseils, n'hésitez pas à nous contacter. Nous
@@ -238,36 +238,39 @@
         </p>
       </div>
     </section>
-    <footer>
+    <footer class="bg_nav flex jcc">
       <div class="leftdiv">
-        <h3>RESEAUX SOCIAUX</h3>
+        <h3 class="bg_colorwh">RESEAUX SOCIAUX</h3>
         <div></div>
       </div>
       <div class="milieu"></div>
       <div class="rightdiv">
-        <h3>RESEAUX SOCIAUX</h3>
-        <div class="contact">
-          <div>
-            <input
+        <h3>CONTACT US</h3>
+        <form class="contact marginB ">
+          <div class="flex">
+            <!-- <input
               type="text"
               name="name"
               id="name"
               placeholder="Enter your name"
-            />
+            /> -->
+            
             <input
               type="text"
               name="address"
               id="address"
               placeholder="address  email"
             />
-          </div>
-          <input
+
+            <input
             type="text"
             name="title"
             id="title"
             placeholder="Enter the discussion title"
           />
-          <div>
+          </div>
+
+          <div class="flex flex-dir gapmin jcR">
             <textarea
               name="message"
               id="message"
@@ -275,12 +278,14 @@
               rows="6"
               placeholder="write your message"
             ></textarea>
-            <button>ENVOYER</button>
+            <button type="submit">ENVOYER</button>
           </div>
-        </div>
+        </form>
       </div>
       </div>
       <!-- <h3>RESEAUX SOCIAUX</h3> -->
     </footer>
+    <script src="javascript.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
