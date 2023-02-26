@@ -55,7 +55,26 @@ img{width: 44vw; height: 36vh;}
 @media screen and (min-width:718px) {
     .top{ top: 140px;}
 .photo {height: 13rem;width: 13rem; }
+.imgprojet{width: 30rem;}
+   
+}
+@media screen and (min-width:768px) {
+    img{width: 44vw; height: 40vh;}
+.photo {height: 13rem;width: 13rem; }
+   
+}
 
-
+@media screen and (min-width:900px) {
+    .top{ top: 70px;}
+    img{width: 20vw; height: 49vh;}
+    .photo {height: 16rem;width: 16rem; }
+    .photo img{height: 15rem;width: 15rem;}
+    input{height: 32px; width: 40vw;margin: 5px;}
+    .fontsizeMax{font-size: 3rem;}
+    .fontsizeMin{font-size: 2rem;}
+    .fontsizetext{font-size: 1rem;}
+    .imgprojet{width: 30rem;}
+    .margin{margin: 13vh  10vw;}
+    .widthtexte1{min-width: 30vw;}
    
 }
