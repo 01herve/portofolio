@@ -1,0 +1,324 @@
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+
+$bg_nav:#1F203A;
+$bg_photo:#E3E3E3;
+$bg_img:#F2F2F2;
+$bg_txt:#454545;
+$bg_btn:#ffa54d;
+
+$size_nav:112px;
+$size_logo:9vw;
+$size_after:26vh;
+
+$media:"only screen and (max-with:$size_media)";
+
+
+%flex{display: flex;}
+%jcc{justify-content: center;align-items: center;}
+%templete01{h3{font-weight: 400;strong{font-weight: 700;}}}
+%templeteh3{    h3{position: absolute;left: 47px;}}
+%bd_img{border:2px solid $bg_img;border-radius: 10px;}
+%centre{left: 50%;top: 50%;transform: translate(-50%,-50%);}
+%btn{ button{
+    background-color: $bg_btn;
+    width: 229px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+   }}
+%fullall{
+                div{object-fit:cover;overflow: hidden;position: relative;
+                    p{visibility: hidden;
+                        position: absolute;
+                        text-align: center;
+                        @extend %centre;
+                        font-size: 25px;
+                        font-weight: 700;
+                        // @extend img{visibility: visible;}
+
+                }  
+                img{transition:all 0.3s ease;width: 30vw;height: 40vh;@extend %bd_img; 
+
+                    &:hover{transform: scale(1.1);opacity: 0.3;}
+
+                    }
+
+                    }
+                    }
+*{margin: 0; padding: 0; box-sizing: border-box;
+font-family: 'Libre Baskerville', serif;
+color: $bg_txt;
+}
+
+header{
+    background-color: $bg_nav;
+    height: $size_nav;
+    nav{
+        width: 60vw;
+        margin: 0 auto;
+        height: $size_nav;
+        @extend %flex;
+        justify-content: space-between;align-items: center;
+        img{
+            width: $size_logo;
+           
+        }
+    }
+}
+.afterNad{
+    background-color: $bg_img;
+    height: $size_after+10;
+    @extend %flex;
+    justify-content: center;
+    margin-bottom: 7rem;
+    position: relative;
+    .photo{
+        width: 21rem;
+        height: 21rem;
+        border-radius: 320px;
+        border:9px solid #fff;
+        background-color: $bg_photo;
+        @extend %flex;
+        @extend %jcc;
+        position: absolute;
+        bottom: -6rem;
+        img{
+            width: 19rem;
+            height: 19rem;
+            border-radius: 300px;
+            
+    }
+    }
+    }
+.creatif{
+    width: 60vw;
+    @extend %flex;
+    @extend %jcc;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+
+    width: 34rem;
+/* or 24px */
+    @extend %templete01;
+    h3{font-size: 32px;}
+   p{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 196%;
+    width: 29vw;
+   }
+    @extend %btn;
+}
+.sec2{
+    height: 62rem;
+    background-color: #fff;
+    
+    .vide{
+        height: 37rem;
+        @extend %flex;
+        position: relative;
+        @extend %flex;
+        @extend %jcc;
+        
+        .textsec2{
+            position: absolute;
+            left: 30rem;
+           @extend %templete01;
+           h3{font-size: 20px;}
+           
+        }
+        img{
+            // position: absolute;
+            width: 34rem;
+            // height: 581.79px;
+            // top: 3rem;
+            margin: 48rem 6rem 0;
+            
+           }
+           .phtbtn{
+                position: relative;
+        
+                    button{
+                        position: absolute;
+                        left: 6rem;
+                        padding: 1rem 4rem;
+                        border-radius: 10px;
+                        border: none;
+                        background-color: $bg_btn;
+                        color: #fff;
+                        margin-top: 20px;
+                }
+
+                .cardphoto{
+                    // position: absolute;
+                    // top: 50rem;
+                    margin: 30rem 6rem 0;
+                    background-color: #f2f1ed;
+                    width: 34rem;
+                    height: 611px; 
+                    top: 70rem; 
+                    @extend %flex;
+                    @extend %jcc;
+                    img{
+                        margin:0;
+                    }
+                    }
+                    
+                }
+    }
+    .partie2img{
+        width: 100vw;
+        height: 400px;
+        background-color: #e5e5e5;
+        
+    }
+}
+
+.partiedigit{
+    margin-top: 15rem;
+   
+    @extend %flex;
+    flex-direction: column;
+    @extend %jcc;
+    height: 60rem;
+
+    .digital{
+        @extend %flex;
+        gap: 60px;
+        align-items: center;
+
+        .lefttext{
+            width: 504px;
+           p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 134.5%;
+           }
+        }
+        .nous{
+            font-size: 4rem;
+            text-align: right;
+        }
+        .dig{
+            font-size: 6rem;
+        }
+    }
+
+    .partiearrow{
+        margin: 30px;
+        @extend %flex;
+        flex-direction: column;
+        @extend %jcc;
+        gap: 6rem;
+       
+        p{
+            // height: 175px;
+            width: 560px;
+            text-align: center;
+
+
+        }
+    }
+}
+
+.projets{
+    @extend %flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: 50px 0;
+    .col1{
+        @extend %templeteh3;
+        .projetscode{
+            position: relative;
+            margin: 60px 0;
+            @extend %flex;
+            @extend %jcc;
+            height: 21rem;
+            gap: 3rem;
+            @extend %fullall;
+    }}
+    .col2{
+        @extend %templeteh3;
+        .design{
+            position: relative;
+            @extend %flex;
+            @extend %jcc;
+            height: 21rem;
+            gap: 3rem;
+            margin: 60px 0;
+            @extend %fullall;
+    }}
+    
+        @extend %btn;
+        button{
+            margin: 0 auto;
+        }
+    
+}
+.middle{
+    // height: 60rem;
+    @extend %flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .expoleft{
+        margin: 10rem 0;
+        @extend %flex;
+        flex-direction: column;
+        gap: 20px;
+        h3{
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 32px;
+            line-height: 40px;
+            span{color: $bg_btn;}}
+        .explore{
+            width: 549px;
+            height: 162px;
+            top: 67px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+        }
+            @extend %btn;   
+        
+    }
+    .service{
+          position: relative;
+            width: 545px;
+            font-weight: 400;
+            font-size: 16px;
+            top: 50vh;
+            
+            line-height: 140%;
+            /* or 22px */
+            text-align: right;
+            p{
+                position: absolute;
+                left:1 px;
+            }
+        }
+}
+
+footer{
+    @extend %flex;
+    justify-content: space-between;
+    background-color: $bg_nav;
+    .leftdiv{
+        background-color: red;
+        width: 55rem;
+    }
+    .milieu{
+        width: 1px;
+height: 366px;
+    }
+    .rightdiv{width: 55rem;
+    background-color:yellow;
+    }
+}
