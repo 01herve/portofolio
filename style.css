@@ -15,6 +15,10 @@ svg path {
     stroke-width: 1px;
 }
 
+span {
+    display: none;
+}
+
 #top,
 #bottom {
     stroke-dasharray: 30, 75.39;

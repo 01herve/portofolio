@@ -1,57 +1,85 @@
 const FORM = document.querySelector('form')
+const messageError = document.querySelectorAll('.errorMessage')
 
 
 
-let message_erreurs = {
-    empty: (field) => `Le champ ${field} est vide`,
-    email: (field) => `Le champ ${field} doit etre un email valide`,
-    length: (field, length) => `Le champ ${field} doit avoir au  moin ${length} characteres`,
+
+
+
+function checkIfEmpty(field, errorMessage) {
+    return field.trim() === "" ? errorMessage : "";
+}
+function checkIfLength(field, value) {
+    return `le ${field} doit avoir ${value} caracteres`
 }
 
-function verifieFields(field, value, ...validations) {
 
-    value = value.value.trim()
-    for (const validation of validations) {
-        if (typeof validation === 'string') {
-            if (validation === 'required') {
-                if (value === '') console.log(message_erreurs.empty(field))
-            }
 
-            if (validation === 'email') {
-                if (!isNotMailValid(value)) console.log(message_erreurs.email(field))
-            }
-        } else {
 
-            if (validation[0] === 'length') {
-                if (value.length < validation[1]) console.log(message_erreurs.length(field, validation[1]))
-            }
-        }
+
+
+
+function validateForm() {
+    const email = FORM.mail.value.trim();
+    const subject = FORM.title.value.trim();
+    const message = FORM.message.value.trim();
+
+    const errors = {};
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+        errors.email = "Veuillez entrer une adresse email.";
+    } else if (!emailRegex.test(email)) {
+        errors.email = "Veuillez entrer une adresse email valide.";
     }
 
-}
-function isNotMailValid(value) {
-    let regex_mail = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/;
-    if (!regex_mail.test(value)) {
-        return message_erreurs.email(field);
+    if (subject === "") {
+        errors.subject = "Veuillez entrer un objet pour votre message.";
+    } else if (subject.trim().length < 5) {
+        errors.subject = "Le sujet doit avoir au moins 5 caractères.";
     }
-    return false;
+
+    if (message === "") {
+        errors.message = "Veuillez entrer un message.";
+    } else if (message.trim().length < 10) {
+        errors.message = "Le message doit avoir au moins 10 caractères.";
+    }
+
+    if (Object.keys(errors).length > 0) {
+        return { errors };
+    }
+
+
+    return { email, subject, message };
 }
 
 
+FORM.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-FORM.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // verifieFields('adresse mail', FORM.mail, 'required'['email', isNotMailValid(value)]);
-    // verifieFields('titre', FORM.title, 'required', ['length', 10]);
-    // verifieFields('de message', FORM.message, 'required', ['length', 10]);
+    const result = validateForm();
 
+    if (result.errors) {
+        // Afficher les erreurs
+        Object.keys(result.errors).forEach((key, index) => {
+            messageError[index].textContent = result.errors[key];
+            messageError[index].style.color = 'red'
+            messageError[index].style.display = 'block'
 
+        });
+    } else {
 
-    sendMail()
-    FORM.reset()
+        const { email, subject, message } = result;
+        // sendMail(email, subject, message);
 
+        Object.keys(result.errors).forEach((key, index) => {
+            messageError[index].style.display = 'none'
 
-})
+        });
+        console.log('oui')
+    }
+});
+
 
 
 function sendMail() {
@@ -73,6 +101,9 @@ function sendMail() {
             titre: FORM.title.value = "";
             console.log(res);
             afficherMessage()
+            FORM.title.style.borderColor = 'black'
+            FORM.mail.style.borderColor = 'black'
+            FORM.message.style.borderColor = 'black'
 
         })
         .catch(err => console.log(err));
